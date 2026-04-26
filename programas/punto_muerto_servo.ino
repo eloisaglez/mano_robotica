@@ -13,8 +13,12 @@
  * 6. Con pilas (6V) suele ser ~1540 us
  * 7. El valor donde el servo se quede quieto es tu SERVO_PARADO_US
  * 8. Usa ese valor en el programa de la mano robotica
- */
-
+ *
+ * Ejemplo
+ * 1520 µs → parado (valor encontrado)
+ *  > 1520 µs → gira en un sentido
+ *  < 1520 µs → gira en el otro sentido
+ * Si le mandas 1530µs en lugar de 1520µs, le estás diciendo "gira despacio" sin querer 
 #include <Servo.h>
 Servo servo;
 
