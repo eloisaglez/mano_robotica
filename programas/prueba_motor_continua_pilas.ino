@@ -4,7 +4,7 @@ Servo servo;
 void setup() {
   Serial.begin(115200);
   servo.attach(9);
-  servo.writeMicroseconds(1540);  // parado
+  servo.writeMicroseconds(1540);  // parado (ejecutar 1º bucar_parada_servo_tiempo para encontrar el valor de punto puerto)
   delay(2000);
 
   Serial.println("Cerrando...");
