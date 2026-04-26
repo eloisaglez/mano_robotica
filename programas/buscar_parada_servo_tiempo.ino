@@ -12,10 +12,10 @@
  * 5. Usa ese valor en el programa de la mano robotica
  *
  * Ejemplo
- * 1520 µs → parado (valor encontrado)
- *  > 1520 µs → gira en un sentido
- *  < 1520 µs → gira en el otro sentido
- * Si le mandas 1530µs en lugar de 1520µs, le estás diciendo "gira despacio" sin querer 
+ * 1530 µs → parado (valor encontrado)
+ *  > 1530 µs → gira en un sentido
+ *  < 1530 µs → gira en el otro sentido
+ * Si le mandas 1540µs en lugar de 1530µs, le estás diciendo "gira despacio" sin querer 
  */
 
 #include <Servo.h>
