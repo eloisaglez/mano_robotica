@@ -1,3 +1,33 @@
+/*
+ * Calibracion de pasos del motor 28BYJ-48 + ULN2003
+ * 
+ * Programa interactivo para encontrar el numero exacto de pasos
+ * que necesita el motor para cerrar la pinza completamente.
+ * 
+ * Comandos por Monitor Serie (9600 baud):
+ *   c → cierra (mueve al valor estimado + ajuste)
+ *   a → abre (vuelve a posicion 0)
+ *   + → añade 20 pasos al ajuste
+ *   - → quita 20 pasos al ajuste
+ *   k → guarda el valor final de pasos maximos
+ * 
+ * Uso:
+ *   1. Pulsa c — si no cierra del todo pulsa + varias veces
+ *   2. Pulsa a — abre
+ *   3. Pulsa c — cierra con el nuevo valor
+ *   4. Repite hasta que cierre justo
+ *   5. Pulsa k — muestra PASOS_MAXIMOS
+ *   6. Copia ese valor al programa de la mano: mano_robotica_stepper.ino
+ * 
+ * Conexiones:
+ *   Arduino pin 8  -> ULN2003 IN1
+ *   Arduino pin 9  -> ULN2003 IN2
+ *   Arduino pin 10 -> ULN2003 IN3
+ *   Arduino pin 11 -> ULN2003 IN4
+ *   Fuente 5V      -> ULN2003 VCC (NO usar 5V del Arduino)
+ *   GND comun       -> ULN2003 GND + Arduino GND
+ */
+
 #include <Arduino.h>
 
 const int IN1 = 8;
