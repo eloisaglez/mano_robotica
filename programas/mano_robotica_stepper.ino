@@ -8,6 +8,10 @@
  *   c -> calibrar EMG (5 mediciones reposo + 5 contracción)
  *   s -> usar valores guardados de EMG
  * 
+ * Calibración EMG:
+ *   - Reposo: 5 mediciones con cuenta atrás automática (relajar el músculo)
+ *   - Contracción: 5 mediciones con ENTER (contraer el músculo y pulsar ENTER cada vez)
+ * 
  * Conexiones:
  *   MyoWare SIG -> A0
  *   MyoWare VCC -> 5V Arduino
@@ -20,8 +24,10 @@
  *     Alimentación externa para el motor (GND común con Arduino)
  * 
  * NOTA: Los pasos máximos para cerrar completamente la pinza
- *       se definen en la constante PASOS_MAXIMOS (ajustar según calibración).
+ *       se definen en la constante PASOS_MAXIMOS (ajustar según calibración
+ *       previa con calculo_pasos_stepper.ino).
  */
+
 
 #include <Arduino.h>
 
